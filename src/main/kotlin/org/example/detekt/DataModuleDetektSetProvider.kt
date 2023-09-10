@@ -4,14 +4,14 @@ import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.api.RuleSet
 import io.gitlab.arturbosch.detekt.api.RuleSetProvider
 
-class MyRuleSetProvider : RuleSetProvider {
-    override val ruleSetId: String = "MyRuleSet"
+class DataModuleDetektSetProvider : RuleSetProvider {
+    override val ruleSetId: String = "TechnodomeDataRuleSet"
 
     override fun instance(config: Config): RuleSet {
         return RuleSet(
             ruleSetId,
             listOf(
-                MyRule(config),
+                MoshiPackageRule(config),
             ),
         )
     }

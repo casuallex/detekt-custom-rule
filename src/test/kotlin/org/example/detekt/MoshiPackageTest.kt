@@ -19,7 +19,7 @@ internal class MoshiPackageTest(private val env: KotlinCoreEnvironment) {
             class AuthResponse()
 
         """
-        val findings = MoshiPackageRule(Config.empty).compileAndLintWithContext(env, code)
+        val findings = DataPackageRule(Config.empty).compileAndLintWithContext(env, code)
         findings shouldHaveSize 1
     }
     @Test
@@ -31,7 +31,7 @@ internal class MoshiPackageTest(private val env: KotlinCoreEnvironment) {
             class AuthResponse()
 
         """
-        val findings = MoshiPackageRule(Config.empty).compileAndLintWithContext(env, code)
+        val findings = DataPackageRule(Config.empty).compileAndLintWithContext(env, code)
         findings shouldHaveSize 0
     }
 }
